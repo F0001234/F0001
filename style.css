@@ -17,7 +17,7 @@ section {
     align-items: center;
     background: linear-gradient(to bottom, #b1e2ff, #b9ebff);
     z-index: 1;
-    opacity: 0
+    opacity: 1
 }
 
 section.hidden {
@@ -26,6 +26,7 @@ section.hidden {
 
 
 }
+
 /*绘制中间的横线 */
 section::before {
     content: '';
@@ -43,12 +44,14 @@ section .color {
     filter: blur(150px);
     opacity: 0；
 }
+
 section.color.hidden {
     opacity: 1;
     transition: 2s;
 
 
 }
+
 section .color:nth-child(1) {
     background: #80c2e0;
     width: 600px;
@@ -78,6 +81,7 @@ section .color:nth-child(3) {
     z-index: 2;
     transform: translateY(-20px);
 }
+
 #liebiao.hidden {
     transform: translateY(0px);
     transition: 1.2s;
@@ -92,6 +96,7 @@ ul li {
 
 
 }
+
 ul li a {
     position: relative;
     width: 80px;
@@ -130,4 +135,37 @@ ul li a::before {
 
 ul li a:hover::before {
     transform: skewX(45deg) translateX(-150px);
+}
+
+/* 文字提示框 */
+.tooltip {
+    position: absolute;
+    padding: 8px;
+    background-color: #ffffff;
+    color: rgb(128, 162, 194);
+    border-radius: 5px;
+    display: none;
+    white-space: nowrap;
+    z-index: 4;
+    opacity: 0.75;
+    box-shadow: 0 5px 45px rgba(93, 160, 204, 0.514);
+    left: 330px;
+    top: 90px;
+
+}
+
+.tooltip2 {
+    position: absolute;
+    padding: 8px;
+    background-color: #ffffff;
+    color: rgb(128, 162, 194);
+    border-radius: 5px;
+    display: none;
+    white-space: nowrap;
+    z-index: 4;
+    opacity: 0.75;
+    box-shadow: 0 5px 45px rgba(93, 160, 204, 0.514);
+    left: 130px;
+    top: 90px;
+
 }
