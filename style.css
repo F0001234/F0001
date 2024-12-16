@@ -54,23 +54,23 @@ section.color.hidden {
 
 section .color:nth-child(1) {
     background: #80c2e0;
-    width: 600px;
-    height: 600px;
+    width: 42%;
+    height: 42%;
     top: -350px;
 }
 
 section .color:nth-child(2) {
     background: #8ee8ff;
-    width: 500px;
-    height: 500px;
+    width: 35%;
+    height: 35%;
     bottom: -150px;
     left: 100px;
 }
 
 section .color:nth-child(3) {
     background: #8eb6ff;
-    width: 300px;
-    height: 300px;
+    width: 20%;
+    height: 20%;
     bottom: 50px;
     right: 0px;
 }
@@ -99,7 +99,7 @@ ul li {
 
 ul li a {
     position: relative;
-    width: 80px;
+    width: 100px;
     aspect-ratio: 1/1;
     border-radius: 10px;
     display: flex;
@@ -138,7 +138,7 @@ ul li a:hover::before {
 }
 
 /* 文字提示框 */
-.tooltip {
+.tooltip1 {
     position: absolute;
     padding: 8px;
     background-color: #ffffff;
@@ -149,9 +149,8 @@ ul li a:hover::before {
     z-index: 4;
     opacity: 0.75;
     box-shadow: 0 5px 45px rgba(93, 160, 204, 0.514);
-    left: 330px;
-    top: 90px;
-
+    left: 32px;
+    top: 100px;
 }
 
 .tooltip2 {
@@ -165,7 +164,40 @@ ul li a:hover::before {
     z-index: 4;
     opacity: 0.75;
     box-shadow: 0 5px 45px rgba(93, 160, 204, 0.514);
-    left: 130px;
-    top: 90px;
-
+    left: 157px;
+    top: 100px;
+}
+.tooltip3 {
+    position: absolute;
+    padding: 8px;
+    background-color: #ffffff;
+    color: rgb(128, 162, 194);
+    border-radius: 5px;
+    display: none;
+    white-space: nowrap;
+    z-index: 4;
+    opacity: 0.75;
+    box-shadow: 0 5px 45px rgba(93, 160, 204, 0.514);
+    left: 277px;
+    top: 100px;
+}
+.tooltip4 {
+    position: absolute;
+    padding: 8px;
+    background-color: #ffffff;
+    color: rgb(128, 162, 194);
+    border-radius: 5px;
+    display: none;
+    white-space: nowrap;
+    z-index: 4;
+    opacity: 0.75;
+    box-shadow: 0 5px 45px rgba(93, 160, 204, 0.514);
+    left: 389px;
+    top: 100px;
+}
+#animation3{
+    width: 50px;
+    /* 设置宽度 */
+    height: 50px;
+    /* 设置高度 */
 }

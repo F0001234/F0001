@@ -39,9 +39,9 @@
         span {
             display: inline-block;
             /* 确保 span 能正常显示动画 */
-            width: 45px;
+            width: 60px;
             /* 设置宽度 */
-            height: 45px;
+            height: 60px;
             /* 设置高度 */
         }
     </style>
@@ -56,13 +56,10 @@
         <div class="color"></div>
         <div class="color"></div>
         <ul id="liebiao">
-            <li><a href="#" title="TEAM"><i class="fa-brands fa-apple"></i></a></li>
-            <li id="qq2"><a href="#"><i><span id="animation2"></span></i></a></li>
-            <div id="tooltip2" class="tooltip2"></div>
-            <li class="hover-box"><a href="#" title="HOME"><i class="fa-brands fa-ubuntu"><img src="./tupian/home.png"
-                            class="home"></i></a></li>
-            <li id="qq"><a href="#"><i><span id="animation1"></span></i></a></li>
-            <div id="tooltip" class="tooltip"></div>
+            <li id="qq1"><a href="#"><i><span id="animation4"></span></i></a></li><div id="tooltip1" class="tooltip1"></div>
+            <li id="qq2"><a href="#"><i><span id="animation2"></span></i></a></li><div id="tooltip2" class="tooltip2"></div>
+            <li id="qq3"><a href="#"><i><span id="animation3"></span></i></a></li><div id="tooltip3" class="tooltip3"></div>
+            <li id="qq4"><a href="#"><i><span id="animation1"></span></i></a></li><div id="tooltip4" class="tooltip4"></div>
             <li><a href="#" title="life"><i class="fa-brands fa-redhat"></i></a></li>
         </ul>
     </section>
@@ -94,6 +91,24 @@
             autoplay: false, // 初始不播放
             path: 'animation2.json' // 动画 JSON 文件路径
         });
+                // 个人动画
+        // 初始化 Lottie 动画
+        const animation3 = lottie.loadAnimation({
+            container: document.getElementById('animation3'), // 指定容器
+            renderer: 'svg',
+            loop: true, // 循环播放
+            autoplay: false, // 初始不播放
+            path: 'animation3.json' // 动画 JSON 文件路径
+        });
+             // 个人动画
+        // 初始化 Lottie 动画
+        const animation4 = lottie.loadAnimation({
+            container: document.getElementById('animation4'), // 指定容器
+            renderer: 'svg',
+            loop: true, // 循环播放
+            autoplay: false, // 初始不播放
+            path: 'animation4.json' // 动画 JSON 文件路径
+        });
 
         // 监听动画完成事件
         animation.addEventListener('complete', () => {
@@ -114,12 +129,12 @@
         // });
 
         // 鼠标悬停时播放动画
-        document.getElementById('qq').addEventListener('mouseenter', function () {
+        document.getElementById('qq4').addEventListener('mouseenter', function () {
             animation1.play();
         });
 
         // 鼠标离开时暂停动画
-        document.getElementById('qq').addEventListener('mouseleave', function () {
+        document.getElementById('qq4').addEventListener('mouseleave', function () {
             animation1.stop();
         });
 
@@ -132,26 +147,46 @@
         document.getElementById('qq2').addEventListener('mouseleave', function () {
             animation2.stop();
         });
+        // 鼠标悬停时播放动画
+        document.getElementById('qq3').addEventListener('mouseenter', function () {
+        animation3.play();
+        });
+
+        // 鼠标离开时暂停动画
+        document.getElementById('qq3').addEventListener('mouseleave', function () {
+            animation3.stop();
+        });
+        // 鼠标悬停时播放动画
+        document.getElementById('qq1').addEventListener('mouseenter', function () {
+        animation4.play();
+        });
+
+        // 鼠标离开时暂停动画
+        document.getElementById('qq1').addEventListener('mouseleave', function () {
+            animation4.stop();
+        });
 
     </script>
     <!-- 提示框 -->
     <script>
-        const hoverBox = document.querySelector('.qq');
-        const tooltip = document.getElementById('tooltip');
+        // 个人
+        const hoverBox4 = document.querySelector('.qq4');
+        const tooltip4 = document.getElementById('tooltip4');
 
-        qq.addEventListener('mouseover', function (e) {
-            tooltip.style.display = 'block';
+        qq4.addEventListener('mouseover', function (e) {
+            tooltip4.style.display = 'block';
             // tooltip.style.top = '80px';
             // tooltip.style.transition = '2s';
-            tooltip.textContent = 'MYSELF';
+            tooltip4.textContent = 'MYSELF';
             // tooltip.style.left = e.clientX + -130 + 'px'; // 设置提示框的水平位置
             // tooltip.style.top = e.clientY + -300 + 'px'; // 设置提示框的垂直位置
 
         });
 
-        qq.addEventListener('mouseout', function () {
-            tooltip.style.display = 'none';
+        qq4.addEventListener('mouseout', function () {
+            tooltip4.style.display = 'none';
         });
+        // 项目
         const hoverBox2 = document.querySelector('.qq2');
         const tooltip2 = document.getElementById('tooltip2');
 
@@ -164,6 +199,34 @@
 
         qq2.addEventListener('mouseout', function () {
             tooltip2.style.display = 'none';
+        });
+
+        const hoverBox1 = document.querySelector('.qq1');
+        const tooltip1 = document.getElementById('tooltip1');
+
+        qq1.addEventListener('mouseover', function (e) {
+            tooltip1.style.display = 'block';
+            tooltip1.textContent = 'TEAM';
+            // tooltip2.style.left = e.pageX + -130 + 'px'; // 设置提示框的水平位置
+            // tooltip2.style.top = e.pageY + -300 + 'px'; // 设置提示框的垂直位置
+        });
+
+        qq1.addEventListener('mouseout', function () {
+            tooltip1.style.display = 'none';
+        });
+
+        const hoverBox3 = document.querySelector('.qq3');
+        const tooltip3 = document.getElementById('tooltip3');
+
+        qq3.addEventListener('mouseover', function (e) {
+            tooltip3.style.display = 'block';
+            tooltip3.textContent = 'HOME';
+            // tooltip2.style.left = e.pageX + -130 + 'px'; // 设置提示框的水平位置
+            // tooltip2.style.top = e.pageY + -300 + 'px'; // 设置提示框的垂直位置
+        });
+
+        qq3.addEventListener('mouseout', function () {
+            tooltip3.style.display = 'none';
         });
     </script>
 </body>
