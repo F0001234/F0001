@@ -164,7 +164,7 @@ ul li a:hover::before {
     z-index: 4;
     opacity: 0.75;
     box-shadow: 0 5px 45px rgba(93, 160, 204, 0.514);
-    left: 157px;
+    left: 155px;
     top: 100px;
 }
 .tooltip3 {
@@ -178,7 +178,7 @@ ul li a:hover::before {
     z-index: 4;
     opacity: 0.75;
     box-shadow: 0 5px 45px rgba(93, 160, 204, 0.514);
-    left: 277px;
+    left: 275px;
     top: 100px;
 }
 .tooltip4 {
@@ -195,9 +195,112 @@ ul li a:hover::before {
     left: 389px;
     top: 100px;
 }
+.tooltip5 {
+    position: absolute;
+    padding: 8px;
+    background-color: #ffffff;
+    color: rgb(128, 162, 194);
+    border-radius: 5px;
+    display: none;
+    white-space: nowrap;
+    z-index: 4;
+    opacity: 0.75;
+    box-shadow: 0 5px 45px rgba(93, 160, 204, 0.514);
+    left: 500px;
+    top: 100px;
+}
 #animation3{
-    width: 68px;
+    width: 70px;
     /* 设置宽度 */
-    height: 68px;
+    height: 70px;
     /* 设置高度 */
+}
+#animation5{
+    width: 75px;
+    /* 设置宽度 */
+    height: 75px;
+    /* 设置高度 */
+}
+
+.jindu5 {
+    position: absolute;
+    background: linear-gradient(to right, #00ff73, #ffffff);
+    border-radius: 5px;
+    display: block;
+    white-space: nowrap;
+    z-index: 5;
+    opacity: 0.75;
+    box-shadow: 0 5px 45px rgba(93, 160, 204, 0.514);
+    left: 500px;
+    top: -30px;
+    width: 75px;
+    height: 5px;
+}
+.jindu1 {
+    position: absolute;
+    background: linear-gradient(to right, #ce0000, #a10000);
+    border-radius: 5px;
+    display: block;
+    white-space: nowrap;
+    z-index: 5;
+    opacity: 0.75;
+    box-shadow: 0 5px 45px rgba(93, 160, 204, 0.514);
+    left: 26px;
+    top: -30px;
+    width: 5px;
+    height: 5px;
+}
+.jindu2 {
+    position: absolute;
+    background: linear-gradient(to right, #9c0000, #a10000);
+    border-radius: 5px;
+    display: block;
+    white-space: nowrap;
+    z-index: 5;
+    opacity: 0.75;
+    box-shadow: 0 5px 45px rgba(93, 160, 204, 0.514);
+    left: 145px;
+    top: -30px;
+    width: 5px;
+    height: 5px;
+}
+.jindu3 {
+    position: absolute;
+    background: linear-gradient(to right, #9c0000, #a10000);
+    border-radius: 5px;
+    display: block;
+    white-space: nowrap;
+    z-index: 5;
+    opacity: 0.75;
+    box-shadow: 0 5px 45px rgba(93, 160, 204, 0.514);
+    left: 265px;
+    top: -30px;
+    width: 5px;
+    height: 5px;
+}
+.jindu4 {
+    position: absolute;
+    background: linear-gradient(to right, #9c0000, #a10000);
+    border-radius: 5px;
+    display: block;
+    white-space: nowrap;
+    z-index: 5;
+    opacity: 0.75;
+    box-shadow: 0 5px 45px rgba(93, 160, 204, 0.514);
+    left: 386px;
+    top: -30px;
+    width: 5px;
+    height: 5px;
+}
+.wancheng{
+    position: absolute;
+    top: -20px;
+    left: 15px;
+    z-index: 5;
+}
+.weiwancheng{
+    position: absolute;
+    top: -8px;
+    left: 15px;
+    z-index: 5;
 }
