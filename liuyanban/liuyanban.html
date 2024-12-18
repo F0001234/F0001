@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MESSAGES</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js"></script>
+    <link rel="stylesheet" href="liuyanban.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background-color: black; */
+        }
+
+        span {
+            display: inline-block;
+            /* 确保 span 能正常显示动画 */
+            width: 10px;
+            height: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="player-warp">
+        <div class="player-info1"></div>
+        <div class="player-info">
+            <div><i></i></div>
+            <div class="tubiao">
+                <ul class="biaoqian">
+                    <li id="pp1"><span id="xiayishou"></span></li>
+                    <li id="pp2"><span id="bofang"></span></li>
+                    <li id="pp3"><span id="shangyishou"></span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 个人动画
+        // 初始化 Lottie 动画
+        const animation1 = lottie.loadAnimation({
+            container: document.getElementById('shangyishou'), // 指定容器
+            renderer: 'svg',
+            loop: true, // 循环播放
+            autoplay: false, // 初始不播放
+            path: 'shangyishou.json' // 动画 JSON 文件路径
+        });
+
+        // 个人动画
+        // 初始化 Lottie 动画
+        const animation2 = lottie.loadAnimation({
+            container: document.getElementById('xiayishou'), // 指定容器
+            renderer: 'svg',
+            loop: true, // 循环播放
+            autoplay: false, // 初始不播放
+            path: 'xiayishou.json' // 动画 JSON 文件路径
+        });
+
+        // 个人动画
+        // 初始化 Lottie 动画
+        const animation3 = lottie.loadAnimation({
+            container: document.getElementById('bofang'), // 指定容器
+            renderer: 'svg',
+            loop: false, // 循环播放
+            autoplay: false, // 初始不播放
+            path: 'bofang.json' // 动画 JSON 文件路径
+        });
+
+        // 鼠标悬停时播放动画
+        document.getElementById('pp1').addEventListener('mouseenter', function () {
+            animation2.play();
+        });
+
+        // 鼠标离开时暂停动画
+        document.getElementById('pp1').addEventListener('mouseleave', function () {
+            animation2.stop();
+        });
+
+        // 鼠标悬停时播放动画
+        document.getElementById('pp2').addEventListener('mouseenter', function () {
+            animation3.play();
+        });
+
+        // 鼠标离开时暂停动画
+        document.getElementById('pp2').addEventListener('mouseleave', function () {
+            animation3.stop();
+        });
+
+        // 鼠标悬停时播放动画
+        document.getElementById('pp3').addEventListener('mouseenter', function () {
+            animation1.play();
+            const container = document.getElementById('shangyishou');
+            container.classList.add('shangyishou.hidden'); // 添加隐藏样式
+        });
+
+        // 鼠标离开时暂停动画
+        document.getElementById('pp3').addEventListener('mouseleave', function () {
+            animation1.stop();
+        });
+    </script>
+</body>
+
+</html>
